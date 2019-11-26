@@ -1,0 +1,40 @@
+h1 {
+    text-align: center;
+}
+
+h2 {
+    font: xx-large;
+    border-bottom: 1px solid;
+    text-align: left;
+}
+
+.card {
+    position: relative;
+    top: 20px;
+    text-align: center;
+}
+
+#password {
+    padding: 85px 250px;
+    border-style: dashed;
+    border-width: 7px;
+}
+
+.btn {
+    border-radius: 50%;
+    padding: 30px 66px;
+    border: 2px solid;
+    margin: 50px;
+    cursor: pointer;
+    font-size: 1em;
+    background: #2079b0;
+}
+
+#generate {
+    background: #9d0b0b;
+}
+
+#copyToClipboard {
+    background:lightgray;
+}
+
