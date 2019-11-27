@@ -1,8 +1,12 @@
 * {
     font-family: 'Roboto', sans-serif;
+    
+    
 }
 body {
     background-color: #F5F5F5;
+    
+   
 }
 h1 {
     text-align: center;
@@ -10,20 +14,38 @@ h1 {
 
 h2 {
     font: xx-large;
-    border-bottom: 1px solid;
+    border-bottom: 1px solid lightgray;
+    line-height: 50px;
     text-align: left;
-    padding: 45px;
+    padding:45px;
+    margin: 70px;
+    
+    
 }
-
+::placeholder {
+    font-size: 13px;
+    text-align:top;
+  
+}
 .card {
-    position: relative;
+    
+    width: 50%;
+    margin: auto;
+    /* position: relative; */
     top: 20px;
     text-align: center;
     background: white;
     
+    
+
 }
 
 .card-body {
+    border-bottom: 1px solid lightgray;
+    line-height: 50px;
+    padding:45px;
+    margin: 70px;
+    /* width: 50%; */
     background-color: white;
 }
 
@@ -32,11 +54,11 @@ h2 {
     border-style: dashed;
     border-width: 2px;
     border-color: #E8E8E8;
+
 }
 
 .btn {
     border-radius:28px;
-    
     padding:16px 31px;
     margin: 50px;
     cursor: pointer;
