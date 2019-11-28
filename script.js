@@ -1,11 +1,24 @@
-//function to generate password 
+// Function to generate password 
 function generatePassword() {
-    var numChar = prompt("How many characters would you like?")
+    // asks user how many characters 
+    var numChar = prompt("How many characters would you like?");
+    // alert user if typed less than 8
     if (numChar < 8) {
         alert("Please more than 8 characters");
     }
+    // alert user if typed more than 128
+    if (numChar > 128) {
+        alert("Please be less than 128 characters");
+    }
+    // alert user if he did not type number
     if (isNaN(numChar) === true) {
         alert("Please read and follow instructions.");
+    }
+    // ask user for special character
+    var specialChar = confirm("Would you like any special character?");
+    // 
+    if (specialChar === true) {
+      
     }
 }
 // Assignment Code
