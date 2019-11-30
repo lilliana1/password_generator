@@ -16,11 +16,30 @@ function generatePassword() {
     }
     // ask user for special character
     var specialChar = confirm("Would you like any special character?");
-    // 
+    // if yes, add special character
     if (specialChar === true) {
-      
+    var specialChar = [ "!","#","$","%","&","()","*","+","-",".","/",":",";","<","=",">","?","@"];
+    }
+    // ask user for lower case
+    var lowerChar = confirm("Would you like any lower case?");
+    // if yes, add lower case
+    if (lowerChar === true) {
+      var lowerChar = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+    }
+    // ask user for upper case
+    var upperChar = confirm("Would you like any upper case?");
+    // if yes, add upper case
+    if (upperChar === true) {
+      var upperChar = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z",];
+    }
+    // ask user for number 
+    var numberChar = confirm("Would you like any numbers?");
+    // if yes, add number
+    if (numberChar === true) {
+      var numberChar = [0,1,2,3,4,5,6,7,8,9];
     }
 }
+
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
