@@ -1,14 +1,19 @@
-var specialChar = [ "!","#","$","%","&","()","*","+","-",".","/",":",";","<","=",">","?","@"];
-var lowerChar = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-var upperChar = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z",];
-var numberChar = [0,1,2,3,4,5,6,7,8,9];
-//password is empty 
-var password = [];
-var passwordFlat = [];
-var newPassword = [];
+  //variables declared
+  var specialChar = [ "!","#","$","%","&","()","*","+","-",".","/",":",";","<","=",">","?","@"];
+  var lowerChar = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+  var upperChar = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z",];
+  var numberChar = ["0","1","2","3","4","5","6","7","8","9"];
+  //password is empty 
+  var password = [];
+  //passwordFlat every selection into one array
+  var passwordFlat = [];
+  //newPassword is the creating of the password depending on the numChar that user wrote
+  var newPassword = [];
 
 // Function to generate password 
 function generatePassword() {
+  newPassword = [];
+  password = [];
   // asks user how many characters 
   var numChar = prompt("How many characters would you like?");
   // alert user if typed less than 8
@@ -47,35 +52,21 @@ function generatePassword() {
   if (numberCharQuestion === true) {
     password.push(numberChar);
   }
-
+  //make into one array
   passwordFlat = password.flat();
 
-console.log(passwordFlat);
-
-
-
-  return new String(passwordChars);
- 
- 
-
-}
+  console.log(passwordFlat);
   
-for (var i = 0; i < numberChar.length; i++) {
-  // Randomly chooses a choice from the options array. This is the Computer's guess.
+  //for loop 
+  for (var i = 0; i < numChar; i++) {
+  // Randomly chooses password and push it to newPassword
+  console.log(Math.floor(Math.random() * passwordFlat.length));
+  
   newPassword.push(passwordFlat[Math.floor(Math.random() * passwordFlat.length)]);
+  }
+  //.join()
+  return newPassword.join("");
 }
-
-  
-
-
-
-
-
-  
-   
-
-  
-  
 
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
