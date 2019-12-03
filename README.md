@@ -5,11 +5,17 @@ This Password Generator creates a new personalized strong password. You get to c
 
 ## Code 
 ``` js
-// Declaring variables
+// Declaring global variables
 var specialChar = [ "!","#","$","%","&","()","*","+","-",".","/",":",";","<","=",">","?","@"];
 var lowerChar = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 var upperChar = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z",];
 var numberChar = ["0","1","2","3","4","5","6","7","8","9"];
+// Password is empty 
+var password = [];
+// PasswordFlat every selection into one array
+var passwordFlat = [];
+// newPassword is the creating of the password depending on the numChar that user wrote
+var newPassword = [];
 ```
 
 ``` js
@@ -19,11 +25,13 @@ for (var i = 0; i < numChar; i++) {
 console.log(Math.floor(Math.random() * passwordFlat.length));
 ```
 ``` js
-//fuction that copies password to clipboard
+// Fuction that copies password to clipboard
 function copyToClipboard() {
-var copyText = document.getElementById("password");
-copyText.select();
-document.execCommand("copy");
+    var copyText = document.getElementById("password");
+    copyText.select();
+    document.execCommand("copy");
+    // Alerts what you just copied 
+    alert(copyText.value + " copied to clipboard")
 }
 ```
 ## Technologies
