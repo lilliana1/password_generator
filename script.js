@@ -12,7 +12,9 @@
 
 // Function to generate password 
 function generatePassword() {
+  // erase newPassword
   newPassword = [];
+  // erase password
   password = [];
   // asks user how many characters 
   var numChar = prompt("How many characters would you like?");
@@ -54,7 +56,7 @@ function generatePassword() {
   }
   //make into one array
   passwordFlat = password.flat();
-
+  
   console.log(passwordFlat);
   
   //for loop 
@@ -64,7 +66,7 @@ function generatePassword() {
   
   newPassword.push(passwordFlat[Math.floor(Math.random() * passwordFlat.length)]);
   }
-  //.join()
+  //join makes the string w/out space 
   return newPassword.join("");
 }
 
@@ -87,7 +89,6 @@ function writePassword() {
 function copyToClipboard() {
   var copyText = document.getElementById("password");
   copyText.select();
-  copyText.setSelectionRange(0, 99999)
   document.execCommand("copy");
 }
 
