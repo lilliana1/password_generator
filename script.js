@@ -66,12 +66,17 @@ function generatePassword() {
   
   newPassword.push(passwordFlat[Math.floor(Math.random() * passwordFlat.length)]);
   }
+  copyBtn.classList.remove("inactive");
+  copyBtn.classList.add("active");
+  
+
   //join makes the string w/out space 
   return newPassword.join("");
 }
 
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
+var copyBtn = document.querySelector("#copyToClipboard");
 
 
 // Write password to the #password input
@@ -90,6 +95,7 @@ function copyToClipboard() {
   var copyText = document.getElementById("password");
   copyText.select();
   document.execCommand("copy");
+  alert(copyText.value + " copied to clipboard")
 }
 
 // Add event listener to generate button
