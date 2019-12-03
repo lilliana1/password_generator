@@ -72,7 +72,9 @@ function generatePassword() {
   
   newPassword.push(passwordFlat[Math.floor(Math.random() * passwordFlat.length)]);
   }
+  //remove copybtn class
   copyBtn.classList.remove("inactive");
+  //add copybtn class to change color once the password is generated
   copyBtn.classList.add("active");
   
 
@@ -86,25 +88,24 @@ var copyBtn = document.querySelector("#copyToClipboard");
 
 
 // Write password to the #password input
-function writePassword() {
-  var passwordFinal = generatePassword();
-  var passwordText = document.querySelector("#password");
-
-  passwordText.value = passwordFinal;
-
-  copyBtn.removeAttribute("disabled");
-  copyBtn.focus();
+  function writePassword() {
+    var passwordFinal = generatePassword();
+    var passwordText = document.querySelector("#password");
+    passwordText.value = passwordFinal;
+    copyBtn.removeAttribute("disabled");
+    copyBtn.focus();
 }
 
-
-function copyToClipboard() {
-  var copyText = document.getElementById("password");
-  copyText.select();
-  document.execCommand("copy");
-  alert(copyText.value + " copied to clipboard")
+//function that makes the button copy to clipboard
+  function copyToClipboard() {
+    var copyText = document.getElementById("password");
+    copyText.select();
+    document.execCommand("copy");
+    //alerts what you just copied 
+    alert(copyText.value + " copied to clipboard")
 }
+
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
-// BONUS EVENT LISTENER
