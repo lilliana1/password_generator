@@ -17,14 +17,14 @@ h2 {
     border-bottom: 1px solid lightgray;
     line-height: 50px;
     text-align: left;
-    padding:45px;
-    margin: 70px;
+    padding:10px;
+    margin: 55px;
 }
 
-::placeholder {
+/* ::placeholder {
     font-size: 13px;
     text-align:top;
-}
+} */
 
 .card {
     width: 75%;
@@ -49,16 +49,17 @@ h2 {
     border-style: dashed;
     border-width: 2px;
     border-color: #E8E8E8;
-    font-size: 50px;
+    font-size: 30px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     text-align: center;
 
 
 }
 
-::placeholder {
+/* ::placeholder {
     text-align: center;
     font-size: 50px;
-}
+} */
 /* textarea {
     font-size:30px; 
 } */
