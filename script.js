@@ -21,14 +21,14 @@ function generatePassword() {
   // alert user if typed less than 8
   if (numChar < 8) {
       alert("Please more than 8 characters");
-      // if user puts number < 8, print Most be 8 to 128 characters
-      return ("Most be 8 to 128 characters");
+      // if user puts number < 8, print Must be 8 to 128 characters
+      return ("Must be 8 to 128 characters");
   }
   // alert user if typed more than 128
   if (numChar > 128) {
       alert("Please be less than 128 characters");
-      // if user puts number > 128, print Most be 8 to 128 characters
-      return ("Most be 8 to 128 characters");
+      // if user puts number > 128, print Must be 8 to 128 characters
+      return ("Must be 8 to 128 characters");
   }
   // alert user if he did not type number
   if (isNaN(numChar) === true) {
